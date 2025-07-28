@@ -2,6 +2,7 @@ package com.spring.loginservice.service;
 
 import com.spring.loginservice.dto.LoginMobileRequest;
 import com.spring.loginservice.dto.LoginMobileResponse;
+import com.spring.loginservice.util.StringUtils;
 import com.spring.myaccountmanagementservice.dto.GetMutasiByAccountNumberRequest;
 import com.spring.usermanagementservice.dto.GetUserAuthenticationRequest;
 import com.spring.usermanagementservice.dto.GetUserProfileRequest;
@@ -50,14 +51,14 @@ public class LoginService {
                     return LoginMobileResponse.builder()
                             .fullName(userProfile.getUserProfile().getFullName())
                             .accountNumber(accountUser.getAccountNumber())
-                            .balance(accountUser.getBalance())
+                            .balance(StringUtils.formatRupiah(accountUser.getBalance()))
                             .isLogin(isLogin)
                             .build();
                 }
                 return LoginMobileResponse.builder()
                         .fullName(userProfile.getUserProfile().getFullName())
                         .accountNumber(accountUser.getAccountNumber())
-                        .balance(accountUser.getBalance())
+                        .balance(StringUtils.formatRupiah(accountUser.getBalance()))
                         .isLogin(isLogin)
                         .build();
             }

@@ -17,6 +17,6 @@ public class LoginMobileResponse implements Serializable {
 
     private String fullName;
     private String accountNumber;
-    private BigDecimal balance;
+    private String balance;
     private Boolean isLogin;
 }
