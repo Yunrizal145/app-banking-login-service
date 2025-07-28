@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.spring</groupId>
 	<artifactId>login-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>login-service</name>
 	<description>login service for banking</description>
 	<url/>
@@ -36,38 +36,37 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-<!--		<dependency>-->
-<!--			<groupId>com.spring</groupId>-->
-<!--			<artifactId>user-management-service</artifactId>-->
-<!--			<version>0.0.3-SNAPSHOT</version>-->
-<!--			<classifier>data-model</classifier>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>com.spring</groupId>-->
-<!--			<artifactId>my-account-management-service</artifactId>-->
-<!--			<version>0.0.1-SNAPSHOT</version>-->
-<!--			<classifier>data-model</classifier>-->
-<!--		</dependency>-->
-
 		<dependency>
-			<groupId>com.github.Yunrizal145</groupId>
-			<artifactId>app-banking-user-ms</artifactId>
-			<version>v1.0.0</version>
+			<groupId>com.spring</groupId>
+			<artifactId>user-management-service</artifactId>
+			<version>0.0.3-SNAPSHOT</version>
 			<classifier>data-model</classifier>
 		</dependency>
 
 		<dependency>
-			<groupId>com.github.Yunrizal145</groupId>
-			<artifactId>app-banking-my-account-ms</artifactId>
-			<version>v1.0.1</version>
+			<groupId>com.spring</groupId>
+			<artifactId>my-account-management-service</artifactId>
+			<version>0.0.4-SNAPSHOT</version>
 			<classifier>data-model</classifier>
 		</dependency>
+
+<!--		<dependency>-->
+<!--			<groupId>com.github.Yunrizal145</groupId>-->
+<!--			<artifactId>app-banking-user-ms</artifactId>-->
+<!--			<version>v1.0.0</version>-->
+<!--			<classifier>data-model</classifier>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>com.github.Yunrizal145</groupId>-->
+<!--			<artifactId>app-banking-my-account-ms</artifactId>-->
+<!--			<version>v1.0.1</version>-->
+<!--			<classifier>data-model</classifier>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>RELEASE</version>
 			<optional>true</optional>
 		</dependency>
 		<dependency>
@@ -114,7 +113,7 @@
 
 	<distributionManagement>
 		<repository>
-			<id>github-my-account-service</id>
+			<id>github-login-service</id>
 			<name>GitHub Packages</name>
 			<url>https://maven.pkg.github.com/Yunrizal145/app-banking-login-service</url>
 		</repository>
