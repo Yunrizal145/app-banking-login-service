@@ -22,7 +22,7 @@ public class LoginServiceController {
 //        return null;
 //    }
 
-    @PostMapping("/mobile/login")
+    @PostMapping("/loginmobile")
     public LoginMobileResponse loginMobile(@RequestBody LoginMobileRequest loginMobileRequest){
         return loginService.loginMobile(loginMobileRequest);
     }
