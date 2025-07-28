@@ -32,15 +32,18 @@ public class LoginService {
             var userAuthentication = userManagementService.getUserAuthenticationByUsername(GetUserAuthenticationRequest.builder()
                     .username(request.getUsername())
                     .build());
+            log.info("data userAuth : {}", userAuthentication);
             if (Objects.nonNull(userAuthentication.getUserAuthentication())) {
                 var userAuth = userAuthentication.getUserAuthentication();
                 var userProfile = userManagementService.getUserProfileById(GetUserProfileRequest.builder()
                             .userProfileId(userAuth.getUserProfile().getId())
                         .build());
+                log.info("data userProfile : {}", userProfile);
 
                 var accountUser = myAccountManagementService.getAccountUser(GetMutasiByAccountNumberRequest.builder()
                         .userProfileId(userProfile.getUserProfile().getId())
                         .build());
+                log.info("data userAccount : {}", accountUser);
 
                 if (passwordEncoder.matches(request.getPassword(), userAuth.getPassword())) {
                     isLogin = Boolean.TRUE;
