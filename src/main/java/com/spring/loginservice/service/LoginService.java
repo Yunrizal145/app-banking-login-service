@@ -36,7 +36,7 @@ public class LoginService {
             if (Objects.nonNull(userAuthentication.getUserAuthentication())) {
                 var userAuth = userAuthentication.getUserAuthentication();
                 var userProfile = userManagementService.getUserProfileById(GetUserProfileRequest.builder()
-                            .userProfileId(userAuth.getUserProfile().getId())
+                            .userProfileId(userAuth.getId())
                         .build());
                 log.info("data userProfile : {}", userProfile);
 
